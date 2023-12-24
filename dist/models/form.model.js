@@ -24,10 +24,11 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.FormModel = void 0;
+// form.model.ts
 const mongoose_1 = __importStar(require("mongoose"));
 const formSchema = new mongoose_1.Schema({
     name: { type: String, required: true },
-    image: { type: String, required: true },
+    headerImage: { type: String, required: true },
     questions: [{ type: mongoose_1.Schema.Types.ObjectId, ref: "MainQuestion" }],
 });
 const FormModel = mongoose_1.default.model("Form", formSchema);

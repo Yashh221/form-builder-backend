@@ -4,14 +4,14 @@ interface ComprehensionQuestion extends Document {
   passage: string;
   question: string;
   correctOption: string;
-  options: string[]; // Change here
+  options: string[];
 }
 
 const comprehensionQuestionSchema = new Schema<ComprehensionQuestion>({
   passage: { type: String, required: true },
   question: { type: String, required: true },
   correctOption: { type: String, required: true },
-  options: [{ type: String, required: true }], // Change here
+  options: [{ type: String, required: true }],
 });
 
 const ComprehensionQuestionModel = mongoose.model<ComprehensionQuestion>(
